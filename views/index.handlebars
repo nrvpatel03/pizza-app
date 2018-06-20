@@ -1,0 +1,52 @@
+
+<h1 id="main-title">PIZZA PARTY!</h1>
+
+<h2>Pizzas I've Eaten</h2>
+
+<ul>
+    <!-- Handlebars -->
+    {{#each pizzas}}
+        {{#if devoured}}
+            <li>
+                {{pizza_name}}
+                <button class="change-dev" data-id="{{id}}" data-newDev="false">
+                    Devoured!
+                </button>
+            </li>
+        {{/if}}
+    {{/each}}
+</ul>
+
+<h2>Pizzas I Haven't Eaten</h2>
+
+<ul>
+    <!-- Handlebars -->
+    {{#each pizzas}}
+        {{#unless devoured}}
+            <li>
+                {{pizza_name}}
+                <button class="change-dev" data-id="{{id}}" data-newDev="true">
+                    Devour it!
+                </button>
+            </li>
+        {{/unless}}
+    {{/each}}
+</ul>
+
+<h2>Add Pizza</h2>
+<form class="create-form">
+
+    <div class="form-group">
+        <label for="pn">Pizza Name:</label>
+        <input type="text" id="pn" name="name">
+    </div>
+
+    <div class="form-group">
+        <label for="devour">Did you eat it?</label>
+        <input type="radio" name="devoured" value="1" checked> Devoured<br>
+        <input type="radio" name="devoured" value="0"> Not Devoured
+    </div>
+
+    <!-- SUBMIT CALL APP POST ON THIS BUTTON. -->
+    <button type="submit">Add A Pizza</button>
+</form>

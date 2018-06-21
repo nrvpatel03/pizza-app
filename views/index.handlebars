@@ -1,6 +1,7 @@
-<h1>Pizzas</h1>
+<h1 id="maintitle">Pizza Party!</h1>
+<img id="pizza_img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkJnZPeD6l8VUbygeTTmrnjxgKomn7SiM_5cM6D5yB1_h2R0MZ">
 
-<h2>Pizzas not eaten</h2>
+<h2 class="listtitles">Pizzas not eaten</h2>
 
 <ul>
   {{#each pizzas}}
@@ -9,14 +10,14 @@
 	    {{pizza_name}}
 
       <button class="change-Dev" data-id="{{id}}" data-newdev="true">
-        {{#if devoured}}Devoured{{else}}Devour IT{{/if}}
+        EAT IT!!!
       </button>
       </li>
     {{/unless}}
   {{/each}}
 </ul>
 
-<h2>Pizzas Eaten</h2>
+<h2 class="listtitles">Pizzas Eaten</h2>
 
 <ul>
   {{#each pizzas}}
@@ -25,26 +26,29 @@
 	    {{pizza_name}}
 
       <button class="change-Dev" data-id="{{id}}" data-newdev="false" disabled>
-        {{#if devoured}}Devoured{{else}}Devour IT{{/if}}
+        MMM TASTY!
       </button>
       </li>
     {{/if}}
   {{/each}}
 </ul>
-
-<h2>Add a Pizza</h2>
+<br>
+<h2 id="form title">Make a Pizza</h2>
+<br>
 <form class="create-form">
 
   <div class="form-group">
     <label for="ca">Pizza Name:</label>
     <input type="text" id="ca" name="name">
   </div>
-
+  <br><br>
   <div class="form-group">
-    <label for="pizza">Pizza</label><br>
-    <input type="radio" name="devoured" value="1" checked> Devoured<br>
-    <input type="radio" name="devoured" value="0"> Not Devoured
+    <label for="pizza">Did you eat it?</label>
+    <br><br>
+    <input type="radio" name="devoured" value="1" checked> I ATE IT!
+    <br>
+    <input type="radio" name="devoured" value="0"> NO I DID NOT EAT IT!
   </div>
 
-  <button type="submit">Add Pizza</button>
+  <button id="submitBtn" type="submit">Add Pizza</button>
 </form>

@@ -1,19 +1,59 @@
-li {
-  padding: 5px;
-  margin: 5px;
-  background: #faebd7;
+body{
+  width: 960px;
+  margin: 0 auto;
+  background: yellow;
 }
 
-.label {
-  font-weight: bold;
+h1,h2 {
+  margin: 0 auto;
+  width: fit-content;
+  color: black;
+  text-align: center;
+  padding: 10px;
 }
 
-.create-update-form {
-  padding: 5px;
-  margin: 5px;
-  background: aqua;
+#maintitle{
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+#pizza_img{
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  display: block;
 }
 
-.form-group {
-  margin-bottom: 5px;
+.listtitles{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: red;
+  border: black solid 2px;
+  border-radius: 30px;
 }
+
+ul{
+  margin: 10px auto;
+  display: table;
+  width: 100%;
+  text-align: center;
+  list-style-type: none;
+}
+li{
+  padding: 10px;
+}
+
+#form-title{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.create-form{
+  text-align: center;
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+#submitBtn{
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+

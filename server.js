@@ -4,23 +4,27 @@ var bodyParser = require("body-parser");
 var PORT = process.env.PORT || 3000;
 
 var app = express();
-//static files are files clients download from server. They are not served by express
-//by default so we need this for css, images and other stuff.
+
+// Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
 
-app.use(bodyParser.urlencoded({ extended: true}));
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: true }));
 
+// parse application/json
 app.use(bodyParser.json());
 
+// Set Handlebars.
 var exphbs = require("express-handlebars");
 
-app.engine("handlebars", exphbs({defaultLayout: "main"}));
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-var routes = require("./controllers/pizza_controller.js");
-
+// Import routes and give the server access to them.
+var routes = require("./controllers/pizzaController");
+//routes
 app.use(routes);
 
-app.listen(PORT, function(){
-    console.log("App now listening on localhost: " + PORT);
+app.listen(PORT, function() {
+  console.log("App now listening at localhost:" + PORT);
 });

@@ -1,8 +1,6 @@
-INSERT INTO pizzas(pizza_name, devoured)
-VALUES ("Cheese Pizza", TRUE);
-
-INSERT INTO pizzas(pizza_name, devoured)
-VALUES ("Pineapple Pizza", FALSE);
-
-INSERT INTO pizzas(pizza_name, devoured)
-VALUES ("Mushroom Pizza", TRUE);
+INSERT INTO cats (name) VALUES ('Meeses');
+INSERT INTO cats (name) VALUES ('Bobbi');
+INSERT INTO cats (name, sleepy) VALUES ('Sylvester', true);
+INSERT INTO cats (name, sleepy) VALUES ('Marilyn Manson', true);
+INSERT INTO cats (name, sleepy) VALUES ('Joe Biden', true);
+INSERT INTO cats (name) VALUES ('Owens');

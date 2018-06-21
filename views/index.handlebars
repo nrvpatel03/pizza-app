@@ -5,7 +5,13 @@
 <ul>
   {{#each pizzas}}
     {{#unless devoured}}
-      {{> pizzas/pizza-block devoured=true}}
+      <li>
+	    {{pizza_name}}
+
+      <button class="change-Dev" data-id="{{id}}" data-newdev="true">
+        {{#if devoured}}Devoured{{else}}Devour IT{{/if}}
+      </button>
+      </li>
     {{/unless}}
   {{/each}}
 </ul>
@@ -15,7 +21,13 @@
 <ul>
   {{#each pizzas}}
     {{#if devoured}}
-      {{> pizzas/pizza-block devoured=false}}
+      <li>
+	    {{pizza_name}}
+
+      <button class="change-Dev" data-id="{{id}}" data-newdev="false" disabled>
+        {{#if devoured}}Devoured{{else}}Devour IT{{/if}}
+      </button>
+      </li>
     {{/if}}
   {{/each}}
 </ul>

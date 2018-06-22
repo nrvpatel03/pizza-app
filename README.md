@@ -10,4 +10,4 @@ whether you ate it or not.
 
 GitHub Repo: https://github.com/nrvpatel03/pizza-app
 
-Heroku: 
+Heroku: https://frozen-tor-14838.herokuapp.com/

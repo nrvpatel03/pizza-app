@@ -1,5 +1,18 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
+  //#submitBtn #eatItBtn
+  $("#submitBtn").mouseover(function(){
+    $(this).addClass("animated infinite rubberBand");
+  }).mouseout(function(){
+    $(this).removeClass("animated infinite rubberBand");
+  });
+
+  $("#eatItBtn").mouseover(function(){
+    $(this).addClass("animated infinite jello");
+  }).mouseout(function(){
+    $(this).removeClass("animated infinite jello");
+  });
+
   $(".change-Dev").on("click", function(event) {
     var id = $(this).data("id");
     var newDev = $(this).data("newdev");
